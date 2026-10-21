@@ -6,6 +6,7 @@ import '../../models/match_setup.dart';
 import '../../viewmodels/scoring_view_model.dart';
 import '../../models/match_record.dart';
 import '../../viewmodels/match_history_view_model.dart';
+import '../../theme/app_theme.dart';
 
 class LiveScoringView extends StatelessWidget {
   final MatchSetup setup;
@@ -90,7 +91,7 @@ class _LiveScoringScreen extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.only(bottom: 12),
         child: Card(
-          color: Colors.amber.shade100,
+          color: AppTheme.highlight(context),
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
@@ -119,7 +120,7 @@ class _LiveScoringScreen extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.only(bottom: 12),
         child: Card(
-          color: Colors.green.shade50,
+          color: AppTheme.success(context),
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
@@ -306,8 +307,8 @@ class _LiveScoringScreen extends StatelessWidget {
       );
     }
 
-    final runColor = Colors.grey.shade200;
-    const runText = Colors.black87;
+    const runColor = AppTheme.tealLight;
+    const runText = AppTheme.tealDeep;
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
@@ -454,8 +455,8 @@ class _BallChip extends StatelessWidget {
     } else if (!ball.isLegal) {
       background = Colors.orange.shade800;
     } else {
-      background = Colors.grey.shade300;
-      foreground = Colors.black87;
+      background = AppTheme.tealLight;
+      foreground = AppTheme.tealDeep;
     }
 
     return CircleAvatar(

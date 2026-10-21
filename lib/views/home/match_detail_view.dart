@@ -3,6 +3,7 @@ import '../../models/cricket_match.dart';
 import '../../models/match_detail.dart';
 import '../../repositories/match_repository.dart';
 import '../../viewmodels/match_detail_view_model.dart';
+import '../../theme/app_theme.dart';
 
 class MatchDetailView extends StatelessWidget {
   final CricketMatch match;
@@ -413,8 +414,8 @@ class _BallBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color background = Colors.grey.shade300;
-    Color foreground = Colors.black87;
+    Color background = AppTheme.tealLight;
+    Color foreground = AppTheme.tealDeep;
 
     if (label == 'W') {
       background = Colors.red.shade700;

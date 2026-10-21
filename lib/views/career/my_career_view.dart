@@ -6,6 +6,7 @@ import '../../viewmodels/match_history_view_model.dart';
 import '../../viewmodels/tournament_view_model.dart';
 import '../app_drawer.dart';
 import '../tournaments/tournament_detail_view.dart';
+import '../../theme/app_theme.dart';
 
 class MyCareerView extends StatelessWidget {
   const MyCareerView({super.key});
@@ -249,8 +250,8 @@ class _MatchRecordCard extends StatelessWidget {
                         const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
                       color: isFriendly
-                          ? Colors.blue.shade50
-                          : Colors.amber.shade100,
+                          ? AppTheme.info(context)
+                          : AppTheme.highlight(context),
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text(

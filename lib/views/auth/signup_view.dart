@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../viewmodels/auth_view_model.dart';
 import 'login_view.dart';
 import 'validators.dart';
+import '../widgets/brand_logo.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});
@@ -51,6 +52,8 @@ class _SignUpViewState extends State<SignUpView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                const Center(child: BrandLogo(size: 120)),
+                const SizedBox(height: 16),
                 Text(
                   'Create your account',
                   textAlign: TextAlign.center,

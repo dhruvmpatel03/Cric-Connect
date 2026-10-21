@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../viewmodels/auth_view_model.dart';
 import '../viewmodels/tab_navigation.dart';
 import 'auth/login_view.dart';
+import 'settings/settings_view.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -17,6 +18,12 @@ class AppDrawer extends StatelessWidget {
     final navigator = Navigator.of(context);
     navigator.pop();
     navigator.push(MaterialPageRoute(builder: (_) => const LoginView()));
+  }
+
+  void _openSettings(BuildContext context) {
+    final navigator = Navigator.of(context);
+    navigator.pop(); // close the drawer
+    navigator.push(MaterialPageRoute(builder: (_) => const SettingsView()));
   }
 
   void _showHelp(BuildContext context) {
@@ -168,6 +175,11 @@ class AppDrawer extends StatelessWidget {
               TabNavigation.tournaments),
           tabItem(Icons.insights_outlined, 'My Career', TabNavigation.career),
           const Divider(),
+          ListTile(
+            leading: const Icon(Icons.settings_outlined),
+            title: const Text('Settings'),
+            onTap: () => _openSettings(context),
+          ),
           ListTile(
             leading: const Icon(Icons.help_outline),
             title: const Text('How to use Cric-Connect'),

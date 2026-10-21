@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../viewmodels/auth_view_model.dart';
 import 'signup_view.dart';
 import 'validators.dart';
+import '../widgets/brand_logo.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -48,7 +49,7 @@ class _LoginViewState extends State<LoginView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Icon(Icons.sports_cricket, size: 72),
+                const Center(child: BrandLogo(size: 140)),
                 const SizedBox(height: 8),
                 Text(
                   'Welcome back',

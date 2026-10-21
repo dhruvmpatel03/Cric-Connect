@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../models/tournament.dart';
 import '../../viewmodels/tournament_view_model.dart';
 import '../scoring/match_setup_view.dart';
+import '../../theme/app_theme.dart';
 
 class TournamentDetailView extends StatelessWidget {
   final String tournamentId;
@@ -70,7 +71,7 @@ class _FixturesTab extends StatelessWidget {
       children: [
         if (champion != null)
           Card(
-            color: Colors.amber.shade100,
+            color: AppTheme.highlight(context),
             child: ListTile(
               leading: const Icon(Icons.emoji_events, size: 36),
               title: const Text('Champion'),

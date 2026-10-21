@@ -5,6 +5,7 @@ import '../../repositories/match_repository.dart';
 import '../../viewmodels/home_feed_view_model.dart';
 import '../app_drawer.dart';
 import 'match_card.dart';
+import '../widgets/brand_logo.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -14,7 +15,7 @@ class HomeView extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => HomeFeedViewModel(MatchRepository())..loadFeed(),
       child: Scaffold(
-        appBar: AppBar(title: const Text('Cric-Connect')),
+                appBar: AppBar(title: const AppBarBrand()),
         drawer: const AppDrawer(),
         body: Consumer<HomeFeedViewModel>(
           builder: (context, vm, _) {

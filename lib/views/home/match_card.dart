@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../models/cricket_match.dart';
 import 'match_detail_view.dart';
+import '../../theme/app_theme.dart';
 
 class MatchCard extends StatelessWidget {
   final CricketMatch match;
@@ -103,7 +104,7 @@ class _StatusBadge extends StatelessWidget {
       MatchStatus.upcoming =>
         ('UPCOMING', Colors.blue.shade50, Colors.blue.shade900),
       MatchStatus.completed =>
-        ('RESULT', Colors.grey.shade200, Colors.grey.shade800),
+        ('RESULT', AppTheme.tealLight, AppTheme.tealDeep),
     };
 
     return Container(
