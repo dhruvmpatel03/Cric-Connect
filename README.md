@@ -85,7 +85,7 @@ flutter doctor
 
 ## Author
 
-**Omkumar Desai** (25304643), Master of Computer and Information Sciences, AUT
+**Dhruv Patel** 
 
 AI tools (Claude) were used to support learning Flutter, generating and explaining code, and
 structuring this documentation. All design decisions, testing and evaluation were carried out by the author.
